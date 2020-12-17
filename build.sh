@@ -1,9 +1,11 @@
 #! /bin/bash
+echo "1/3 getting dependencies..."
+npm install
 
-echo "1/2 Starting the build of the react applic"
+echo "2/3 Starting the build of the react applic"
 npm run build
 
-echo "2/2 Packing the application into a docker image"
+echo "3/3 Packing the application into a docker image"
 docker build . -t star-wars-server
 
-echo "2/2 steps completedd. Bye"
+echo "3/3 steps completedd. Bye"
